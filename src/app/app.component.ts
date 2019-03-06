@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'webdriver-gym'
   toDoArray = []
+  simpleTextBlob
   addToDo(value) {
     if (value === '') {
       console.log('Value cannot be null');
@@ -15,6 +16,16 @@ export class AppComponent {
     else {
       this.toDoArray.push(value);
       console.log(this.toDoArray);
+    }
+  }
+  addText(value) {
+    if (value.toString().length > 50) {
+      console.log('Cannot accept text value greater than 50 characters');
+      this.simpleTextBlob = 'TOO MANY CHARACTERS';
+    }
+    else {
+      this.simpleTextBlob = value;
+      console.log('Success!');
     }
   }
   deleteItem(todo) {

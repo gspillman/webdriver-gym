@@ -12,7 +12,7 @@
       <h1 class="text-center text-primary"><span class="pink-text">Todo App</span></h1>
       <div class="input-group-prepend">
         <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
-        <span class="input-group-text" (click)="addToDo(todo.value)" (click)="toDoForm.reset()"><i class="material-icons">Add</i></span>
+        <span class="input-group-text" (click)="addToDo(todo.value)" (click)="toDoForm.reset()"><i>Add</i></span>
       </div>
       <div class="data">
         <ul class="list-instyled">
@@ -24,7 +24,25 @@
     </div>
   </form>
 </div>
-
+<h2>This is a simple text area</h2>
+<div class="simpleTextArea">
+  <form #simpleTextArea ngForm>
+    <div class="form-group">
+      <p><span class="pink-text">Please type something... (50 character limit)</span></p>
+        <textarea class="mytextarea" #simpleText rows="5" cols="35" ngModel></textarea>
+      <span class="input-group-text" (click)="addText(simpleText.value)" (click)="simpleTextArea.reset()"><i>Click Me!</i></span>
+    </div>
+    <span> You entered: {{simpleTextBlob}} </span>
+  </form>
+</div>
+<div class="imageSlider">
+  <h2>Here is an image slider:</h2>
+  <span>
+    <drag-scroll style="width: 100px; height: 10px">
+      Big text goes here...
+    </drag-scroll>
+  </span>
+</div>
 <div class="linksContainer">
   <h2>Here are some random links: </h2>
   <ul>
