@@ -6,6 +6,7 @@ body{
   margin: 0;
   color: #FF69B4;
 }
+
 form{
   max-width: 30em;
   margin: 4em auto;
@@ -14,17 +15,21 @@ form{
   padding: 2em 3em;
   color:#FF69B4;
 }
+
 form h1{
   font-family: "Raleway";
   color:#FF69B4;
 }
+
 form input[type=text]::placeholder{
   font-family: "Raleway";
   color:#666;
 }
+
 form .data{
   margin-top: 1em;
 }
+
 form .data li{
   background: #fff;
   color: #FF69B4;
@@ -33,11 +38,13 @@ form .data li{
   color: #666;
   font-family: "Raleway";
 }
+
 form .data li i{
   float: right;
   color: #FF69B4;
   cursor: pointer;
 }
+
 form .input-group-text{
   color: #FF69B4;
   border-radius: 50%;
@@ -50,13 +57,16 @@ form .input-group-text{
   top: 68px;
   cursor: pointer;
 }
+
 form .input-group-text i{
   font-size: 2em;
 }
+
 form .form-control{
   height: 3em;
   font-family: "Raleway";
 }
+
 form .form-control:focus{
   box-shadow: 0;
 }
@@ -74,4 +84,44 @@ form .form-control:focus{
 
 i {
   color: #FF69B4;
+}
+
+h2 {
+  text-align: center;
+  color: #68268e;
+}
+
+.drag-scroll {
+  background-color: #FF69B4;
+  width: auto;
+  align: center;
+  padding: 10px;
+}
+
+.auth-message {
+  text-align: center;
+  align: center;
+}
+
+.footer {
+  text-align: center;
+  color: #68268e;
+  font-family: "American Typewriter";
+  font-size: 10px;
+  padding: 15px;
+
+}
+
+drag-scroll img {
+  padding-left: auto;
+  padding-right: auto;
+  width: 100px;
+}
+
+.main-container {
+  width: 600px;
+  text-align: center;
+  align: center;
+  padding-right: auto;
+  padding-left: auto;
 }

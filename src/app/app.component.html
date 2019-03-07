@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="main-container">
   <h1>
     Welcome to ...
   </h1>
   <img width="600" alt="Angular Logo" src="assets/webdriver_gym.jpg">
-</div>
+<hr>
 <h2>Here is a random component</h2>
 <div class="toDoContainer">
   <form #toDoForm ngForm>
@@ -24,28 +24,45 @@
     </div>
   </form>
 </div>
-<h2>This is a simple text area</h2>
 <div class="simpleTextArea">
+  <h2>This is a simple text area</h2>
   <form #simpleTextArea ngForm>
     <div class="form-group">
       <p><span class="pink-text">Please type something... (50 character limit)</span></p>
         <textarea class="mytextarea" #simpleText rows="5" cols="35" ngModel></textarea>
-      <span class="input-group-text" (click)="addText(simpleText.value)" (click)="simpleTextArea.reset()"><i>Click Me!</i></span>
+      <span class="input-group-text" (click)="addText(simpleText.value)" (click)="simpleTextArea.reset()"><i>Submit</i></span>
     </div>
     <span> You entered: {{simpleTextBlob}} </span>
   </form>
 </div>
-<div class="imageSlider">
+
+<div>
   <h2>Here is an image slider:</h2>
-  <span>
-    <drag-scroll style="width: 100px; height: 10px">
-      Big text goes here...
+  <div class="form-control">
+    <drag-scroll #nav class="drag-scroll">
+      <img drag-scroll-item src="assets/carousel/80s.png" />
+      <img drag-scroll-item src="assets/carousel/casette.png" />
+      <img drag-scroll-item src="assets/carousel/cube.png" />
+      <img drag-scroll-item src="assets/carousel/joystick.png" />
+      <img drag-scroll-item src="assets/carousel/radio.png" />
+      <img drag-scroll-item src="assets/carousel/tv.png" />
+      <img drag-scroll-item src="assets/carousel/vhs.png" />
+      <img drag-scroll-item src="assets/carousel/viewmaster.png" />
+      <img drag-scroll-item src="assets/carousel/wayfarers.png" />
     </drag-scroll>
-  </span>
+    <br>
+    <!-- TODO: Implement buttons to auto scroll
+    <button class="scrollbutton" (click)="moveLeft()">Left</button>
+    <button class="scrollbutton" (click)="moveRight()">Right</button>
+    -->
+  </div>
 </div>
+
+<hr>
+
 <div class="linksContainer">
   <h2>Here are some random links: </h2>
-  <ul>
+  <ul class="form-control">
     <li>
       <h3><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Integral_theory_(Ken_Wilber)">Integral Theory</a></h3>
     </li>
@@ -58,10 +75,29 @@
   </ul>
 </div>
 
-<div class="container">
-  <!-- login -->
-
+<div class="authContainer">
+  <h2>User Login</h2>
+  <form #loginForm ngForm>
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <input type="text" #user placeholder="User Name" name="user" ngModel>
+        <input type="text" #pass placeholder="Password" name="password" ngModel>
+        <span class="input-group-text" (click)="logIn(user.value, pass.value)" (click)="loginForm.reset()"><i>Submit</i></span>
+      </div>
+    </div>
+  </form>
+  <div class="auth-message">{{authState}}</div>
 </div>
 
+<hr>
+
+<div class="footer">
+  Text item number one<br>
+  Text item number two comes after number one<br>
+  Text item number three comes after number two<br>
+  Text item number three has a <a href="http://www.ytmnd.com">link</a> in it<br>
+  Text item number contains the current date {{currentDate}}<br>
+</div>
 
 <router-outlet></router-outlet>
+</div>

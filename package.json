@@ -1,11 +1,12 @@
 {
   "name": "webdriver-gym",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test-functional": "node_modules/.bin/wdio test/config/wdio.conf.js",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -43,7 +44,12 @@
     "ngx-drag-scroll": "^7.1.3",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.34.3",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "wdio-mocha-framework": "0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "webdriverio": "^4.14.3",
+    "chai": "4.1.2"
   }
 }
