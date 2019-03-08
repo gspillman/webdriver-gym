@@ -1,11 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="main-container">
   <h1>
-    Welcome to ...
+    <span class="pageheader">Welcome to...</span>
   </h1>
   <img width="600" alt="Angular Logo" src="assets/webdriver_gym.jpg">
 <hr>
-<h2>Here is a random component</h2>
+
+<div class="authContainer">
+  <h2>User Login</h2>
+  <form #loginForm ngForm>
+    <div class="form-group">
+      <div class="input-group-prepend">
+          <input type="text" #user class="username" placeholder="User Name" name="user" ngModel>
+          <input type="text" #pass class="password" placeholder="Password" name="password" ngModel>
+          <span class="input-group-text" (click)="logIn(user.value, pass.value)" (click)="loginForm.reset()"><i>Submit</i></span>
+      </div>
+    </div>
+  </form>
+  <div class="auth-message">{{authState}}</div>
+</div>
+
+<hr>
+<h2>Here is a To Do component</h2>
 <div class="toDoContainer">
   <form #toDoForm ngForm>
     <div class="form-group">
@@ -51,10 +67,8 @@
       <img drag-scroll-item src="assets/carousel/wayfarers.png" />
     </drag-scroll>
     <br>
-    <!-- TODO: Implement buttons to auto scroll
-    <button class="scrollbutton" (click)="moveLeft()">Left</button>
-    <button class="scrollbutton" (click)="moveRight()">Right</button>
-    -->
+    <button class="scrollbutton" (click)="nav.moveLeft()">Left</button>
+    <button class="scrollbutton" (click)="nav.moveRight()">Right</button>
   </div>
 </div>
 
@@ -74,22 +88,6 @@
     </li>
   </ul>
 </div>
-
-<div class="authContainer">
-  <h2>User Login</h2>
-  <form #loginForm ngForm>
-    <div class="form-group">
-      <div class="input-group-prepend">
-        <input type="text" #user placeholder="User Name" name="user" ngModel>
-        <input type="text" #pass placeholder="Password" name="password" ngModel>
-        <span class="input-group-text" (click)="logIn(user.value, pass.value)" (click)="loginForm.reset()"><i>Submit</i></span>
-      </div>
-    </div>
-  </form>
-  <div class="auth-message">{{authState}}</div>
-</div>
-
-<hr>
 
 <div class="footer">
   Text item number one<br>

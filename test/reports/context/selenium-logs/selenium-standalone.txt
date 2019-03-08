@@ -1,9 +1,9 @@
-16:20:23.023 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.5, revision: d54ebd709a
-16:20:23.074 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2019-03-07 16:20:23.121:INFO::main: Logging initialized @321ms to org.seleniumhq.jetty9.util.log.StdErrLog
-16:20:23.324 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-16:20:23.399 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-16:20:23.976 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+14:34:14.460 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.5, revision: d54ebd709a
+14:34:14.511 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-03-08 14:34:14.553:INFO::main: Logging initialized @300ms to org.seleniumhq.jetty9.util.log.StdErrLog
+14:34:14.748 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+14:34:14.808 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+14:34:15.417 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "browserName": "chrome",
   "handlesAlerts": true,
   "javascriptEnabled": true,
@@ -20,9 +20,55 @@
   },
   "rotatable": true
 }
-16:20:23.977 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef) on port 32423
+14:34:15.419 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef) on port 45412
 Only local connections are allowed.
-16:20:25.371 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-16:20:25.606 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 01ccc2da6905dd9b971c582373a46105 (org.openqa.selenium.chrome.ChromeDriverService)
-16:20:31.216 INFO [ActiveSessions$1.onStop] - Removing session 01ccc2da6905dd9b971c582373a46105 (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:16.553 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+14:34:16.774 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session a23f0f2bff51cf430e4b0346d72fdedb (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:22.822 INFO [ActiveSessions$1.onStop] - Removing session a23f0f2bff51cf430e4b0346d72fdedb (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:23.263 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "browserName": "chrome",
+  "handlesAlerts": true,
+  "javascriptEnabled": true,
+  "locationContextEnabled": true,
+  "loggingPrefs": {
+    "browser": "ALL",
+    "driver": "ALL"
+  },
+  "project": "Webdriver-Gym",
+  "requestOrigins": {
+    "url": "http:\u002f\u002fwebdriver.io",
+    "version": "4.14.3",
+    "name": "webdriverio"
+  },
+  "rotatable": true
+}
+14:34:23.264 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef) on port 30675
+Only local connections are allowed.
+14:34:24.173 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+14:34:24.204 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session c51af731cfd1573f9b0502cc1a61a64e (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:28.287 INFO [ActiveSessions$1.onStop] - Removing session c51af731cfd1573f9b0502cc1a61a64e (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:28.740 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "browserName": "chrome",
+  "handlesAlerts": true,
+  "javascriptEnabled": true,
+  "locationContextEnabled": true,
+  "loggingPrefs": {
+    "browser": "ALL",
+    "driver": "ALL"
+  },
+  "project": "Webdriver-Gym",
+  "requestOrigins": {
+    "url": "http:\u002f\u002fwebdriver.io",
+    "version": "4.14.3",
+    "name": "webdriverio"
+  },
+  "rotatable": true
+}
+14:34:28.740 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef) on port 40786
+Only local connections are allowed.
+14:34:29.646 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+14:34:29.671 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 63d44804d76ac00647493d175c022947 (org.openqa.selenium.chrome.ChromeDriverService)
+14:34:33.715 INFO [ActiveSessions$1.onStop] - Removing session 63d44804d76ac00647493d175c022947 (org.openqa.selenium.chrome.ChromeDriverService)
