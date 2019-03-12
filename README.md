@@ -90,5 +90,5 @@ the Webdriverio API documentation [here](https://webdriver.io/docs/api.html).
 - [ ] Insure you can run each suite independently by passing a relative flag to the test-functional script
 - [ ] Build tests to satisfy the advanced test spec and make sure they run/pass
 - [ ] Configured another test suite to help run this spec - similar in manner to the previous specs
-- [ ] Modify the wdio config file so that after each test, upon failure only, a screen shot is taken 
+ - [ ] Modify the wdio config file so that after each test, upon failure only, a screen shot is taken 
       of the browser state at the point of failure
