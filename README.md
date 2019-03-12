@@ -1,6 +1,6 @@
-#Webdriver-Gym
+# Webdriver-Gym
 
-##About:
+## About:
 
 This project is a simple web application front end built using Angular JS, intended to be used as a trainer for practicing building test automation using webdriverio. 
 
@@ -8,7 +8,7 @@ The intent is to provide a testing ground for front end automation (with the foc
 that can be used either to evaluate skills, increase experience or allow for experimentation without having to do 
 so with an existing project that targets actual end users or clients. 
 
-##Getting Started:
+## Getting Started:
 
 To build this project, you will need NodeJS version 8+
 
