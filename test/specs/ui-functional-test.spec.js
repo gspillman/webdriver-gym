@@ -7,7 +7,7 @@ describe('Webdriver Gym functional test suite', () => {
     browser.pause(3000);
   });
 
-  it('should all a user to log into the page', () => {
+  it.skip('should all a user to log into the page', () => {
     // Create a test that logs into the page using the correct user name and password.
     //  The user name and password is 'webdriver' and 'gym'
     browser.waitForVisible(page.userNameField);

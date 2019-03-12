@@ -1,68 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Webdriver-Gym
 
-## Available Scripts
+##About:
+
+This project is a simple web application front end built using Angular JS, intended to be used as a trainer for practicing building test automation using webdriverio. 
+
+The intent is to provide a testing ground for front end automation (with the focus on a JavaScript-based solution) 
+that can be used either to evaluate skills, increase experience or allow for experimentation without having to do 
+so with an existing project that targets actual end users or clients. 
+
+##Getting Started:
+
+To build this project, you will need NodeJS version 8+
+
+Download this project and run ```npm install``` to build the application and install project dependencies. 
+
+Note that to run the test automation locally requires a local installation of Chrome Driver for webdriver. 
+
+[This link](http://chromedriver.chromium.org/getting-started) should detail how to install and set up the latest version of Chrome Driver.
+
+## Important Scripts in This Project
 
 In the project directory, you can run:
 
-### `npm start`
+#### ```npm start```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the web app.  Note, you will need start the app before you can successfully run tests<br>
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### ```npm test-functional```
 
-### `npm test`
+This starts webdrivern executes tests against the application locally.  
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can pass arguments to the ```wdio``` binary through this scrip by concatinating them 
+as follows:
 
-### `npm run build`
+```npm run test-functional -- --suite smoke``` to run all tests in the smoke test suite
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+or 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```npm run test-functional -- --spec test/specs/ui-smoke-test.spec.js``` to run a specific spec file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### ```npm test-functional:clean```
 
-### `npm run eject`
+This script deletes accumulated error start screen shots and local selenium logs from your working environment
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The portions of this project are structured as follows:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### ```src```
+This is the project root for the web app front end.  
+Essentially, the directory contains the code the rest of this projects tests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##### ```test```
+This directory contains all project files related to testing the web application with webdriverio
 
-## Learn More
+##### ```config```
+The wdio config file and any other associated files are stored here.  
+The wdio config dictates how Webdriver will behave when testing 
+including timeouts and browser types to test with.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### ```guimaps```
+The page object classes used for testing are stored here.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### ```reports```
+JUnit reports, screen shots and other such assets are stored here. 
 
-### Code Splitting
+##### ```specs```                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  gt6# ```specs```
+Functional tests are stored within class files located here. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Development Checklist
 
-### Analyzing the Bundle Size
+If you are looking for some direction on what to do with this project, there are are some 
+implicit asks to be undertaken in order for the automation work for this app the be 'complete'.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Use the following checklist as a guide to the different tasks needed to 'build out' the 
+automation solution for this project.  
 
-### Making a Progressive Web App
+Most questions of the 'How to do... X' with Webdriverio can be answered by following through 
+the Webdriverio API documentation [here](https://webdriver.io/docs/api.html).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [ ] Start the app locally and run the initial test script
+- [ ] Enable the one completed test in the function test spec which is set to be skipped
+- [ ] Build tests to fulfill the descriptors for all tests in the smoke test spec
+- [ ] Enable and run all tests in the smoke spec - make sure they are passing
+- [ ] Write tests to fulfill the descriptors provided stubs in the functional test spec
+- [ ] Enable these tests, run then and make sure all tests are passing
+- [ ] Configure a test suite for both the smoke test spec and the functional test spec
+- [ ] Insure you can run each suite independently by passing a relative flag to the test-functional script
+- [ ] Build tests to satisfy the advanced test spec and make sure they run/pass
+- [ ] Configured another test suite to help run this spec - similar in manner to the previous specs
+- [ ] Modify the wdio config file so that after each test, upon failure only, a screen shot is taken 
+      of the browser state at the point of failure

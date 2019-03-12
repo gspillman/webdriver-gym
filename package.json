@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "test-functional": "node_modules/.bin/wdio test/config/wdio.conf.js",
+    "test-functional:clean": "rm test/reports/screenshots/*.png && rm test/reports/context/selenium-logs/*.txt",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
